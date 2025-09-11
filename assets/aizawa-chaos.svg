@@ -1,0 +1,116 @@
+<svg width="100%" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="-60 -60 120 120">
+  <defs>
+    <style>
+      .chaos-container {
+        animation: rotate-system 30s infinite linear;
+        transform-origin: center;
+      }
+      
+      .aizawa-trail {
+        fill: none;
+        stroke: url(#trailGradient);
+        stroke-width: 0.2;
+        opacity: 0.6;
+        animation: flow 8s infinite ease-in-out;
+      }
+      
+      .attractor-point {
+        animation: orbit 12s infinite linear;
+        transform-origin: center;
+      }
+      
+      @keyframes rotate-system {
+        0% { transform: rotateZ(0deg) rotateX(0deg); }
+        25% { transform: rotateZ(90deg) rotateX(15deg); }
+        50% { transform: rotateZ(180deg) rotateX(0deg); }
+        75% { transform: rotateZ(270deg) rotateX(-15deg); }
+        100% { transform: rotateZ(360deg) rotateX(0deg); }
+      }
+      
+      @keyframes flow {
+        0% {
+          stroke-dasharray: 0 200;
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-dasharray: 100 100;
+          stroke-dashoffset: -50;
+        }
+        100% {
+          stroke-dasharray: 200 0;
+          stroke-dashoffset: -200;
+        }
+      }
+      
+      @keyframes orbit {
+        0% { 
+          transform: scale(1) rotate(0deg);
+          opacity: 1;
+        }
+        50% { 
+          transform: scale(1.3) rotate(180deg);
+          opacity: 0.7;
+        }
+        100% { 
+          transform: scale(1) rotate(360deg);
+          opacity: 1;
+        }
+      }
+      
+      .chaos-bg {
+        fill: url(#bgGradient);
+        animation: bg-chaos 15s infinite;
+      }
+      
+      @keyframes bg-chaos {
+        0% { filter: hue-rotate(0deg) brightness(0.2); }
+        33% { filter: hue-rotate(120deg) brightness(0.3); }
+        66% { filter: hue-rotate(240deg) brightness(0.25); }
+        100% { filter: hue-rotate(360deg) brightness(0.2); }
+      }
+    </style>
+    
+    <linearGradient id="trailGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff0080;stop-opacity:1">
+        <animate attributeName="stop-color" values="#ff0080;#00ff80;#8000ff;#ff0080" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" style="stop-color:#00ffff;stop-opacity:0.8">
+        <animate attributeName="stop-color" values="#00ffff;#ffff00;#ff00ff;#00ffff" dur="4s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#8000ff;stop-opacity:1">
+        <animate attributeName="stop-color" values="#8000ff;#ff8000;#0080ff;#8000ff" dur="4s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" style="stop-color:#001122;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <rect class="chaos-bg" width="100%" height="100%" />
+  
+  <g class="chaos-container">
+    <!-- Your Aizawa path here - use the path from the first example -->
+    <path class="aizawa-trail" d="M 0,0 Q -8.2,-12.1 -15.8,-8.4 Q -18.9,-2.3 -12.4,6.8 Q -3.1,14.2 8.7,11.9 Q 19.3,4.6 21.8,-7.2 Q 18.4,-18.9 6.1,-23.4 Q -8.9,-21.7 -19.4,-10.3 Q -23.8,3.2 -18.6,17.9 Q -6.2,28.4 11.9,26.8 Q 28.7,16.9 33.1,-2.1 Q 29.8,-22.6 12.4,-34.8 Q -9.4,-36.2 -26.8,-21.4 Q -34.9,0.8 -25.7,25.3 Q -8.1,42.1 18.2,37.9 Q 41.8,24.2 44.6,2.8 Q 38.7,-20.9 15.8,-38.2 Q -12.4,-42.1 -35.2,-25.8 Q -45.3,-1.2 -32.8,28.7 Q -11.9,48.6 22.4,41.8 Q 47.9,25.1 48.2,0.4 Q 39.8,-26.2 13.7,-44.1 Q -18.9,-46.8 -41.2,-28.3 Q -48.7,1.9 -34.1,34.2 Z" />
+    
+    <!-- Orbiting points representing the chaotic system -->
+    <g class="attractor-point">
+      <circle cx="0" cy="0" r="1" fill="#00ffff" opacity="0.9" />
+    </g>
+    <g class="attractor-point" style="animation-delay: 2s;">
+      <circle cx="15" cy="-8" r="0.8" fill="#ff00ff" opacity="0.8" />
+    </g>
+    <g class="attractor-point" style="animation-delay: 4s;">
+      <circle cx="-20" cy="12" r="0.6" fill="#ffff00" opacity="0.7" />
+    </g>
+  </g>
+  
+  <!-- Chaos theory text -->
+  <text x="0" y="-50" text-anchor="middle" font-family="monospace" font-size="3" fill="#00ffff" opacity="0.8">
+    🌊 CHAOS THEORY IN MOTION 🌊
+  </text>
+  <text x="0" y="52" text-anchor="middle" font-family="monospace" font-size="2.5" fill="#ff00ff" opacity="0.6">
+    Aizawa Attractor • Deterministic Chaos
+  </text>
+</svg>
