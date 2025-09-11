@@ -1,0 +1,123 @@
+<svg width="100%" height="400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .flame-layer {
+        mix-blend-mode: screen;
+        animation: flame-wave 2s infinite ease-in-out;
+      }
+      .flame-1 {
+        animation-delay: 0s;
+      }
+      .flame-2 {
+        animation-delay: 0.3s;
+      }
+      .flame-3 {
+        animation-delay: 0.6s;
+      }
+      .flame-4 {
+        animation-delay: 0.9s;
+      }
+      .flame-5 {
+        animation-delay: 1.2s;
+      }
+      @keyframes flame-wave {
+        0%, 100% { 
+          transform: translateY(0px) scaleY(1) scaleX(1); 
+          opacity: 0.8; 
+        }
+        25% { 
+          transform: translateY(-8px) scaleY(1.15) scaleX(0.95); 
+          opacity: 1; 
+        }
+        50% { 
+          transform: translateY(-15px) scaleY(1.25) scaleX(0.9); 
+          opacity: 0.9; 
+        }
+        75% { 
+          transform: translateY(-5px) scaleY(1.1) scaleX(1.05); 
+          opacity: 1; 
+        }
+      }
+      .background-rect {
+        fill: url(#fireGradient);
+        animation: color-shift 4s infinite;
+      }
+      @keyframes color-shift {
+        0% { filter: hue-rotate(0deg) brightness(1); }
+        25% { filter: hue-rotate(10deg) brightness(1.1); }
+        50% { filter: hue-rotate(-5deg) brightness(0.9); }
+        75% { filter: hue-rotate(15deg) brightness(1.05); }
+        100% { filter: hue-rotate(0deg) brightness(1); }
+      }
+      .ember {
+        fill: #ffaa00;
+        animation: float-up 3s infinite linear;
+      }
+      @keyframes float-up {
+        0% { 
+          transform: translateY(0px) scale(1); 
+          opacity: 1; 
+        }
+        50% { 
+          transform: translateY(-150px) scale(0.5); 
+          opacity: 0.7; 
+        }
+        100% { 
+          transform: translateY(-300px) scale(0.1); 
+          opacity: 0; 
+        }
+      }
+    </style>
+    
+    <!-- Gradient definitions for fire colors -->
+    <linearGradient id="fireGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff4500;stop-opacity:0.3" />
+      <stop offset="30%" style="stop-color:#ff6347;stop-opacity:0.4" />
+      <stop offset="60%" style="stop-color:#ffa500;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#ffff00;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <radialGradient id="flameGradient" cx="50%" cy="80%" r="60%">
+      <stop offset="0%" style="stop-color:#ffff00;stop-opacity:0.8" />
+      <stop offset="40%" style="stop-color:#ff6347;stop-opacity:0.6" />
+      <stop offset="80%" style="stop-color:#ff4500;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#8b0000;stop-opacity:0.2" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background with animated gradient -->
+  <rect class="background-rect" width="100%" height="100%" />
+  
+  <!-- Main flame shapes -->
+  <g class="flame-layer flame-1" transform="translate(100,350)">
+    <path d="M0,0 Q-15,-80 0,-120 Q20,-100 25,-140 Q35,-110 40,-150 Q20,-180 0,-200 Q-20,-180 -40,-150 Q-35,-110 -25,-140 Q-20,-100 0,-120 Q15,-80 0,0 Z" 
+          fill="url(#flameGradient)" />
+  </g>
+  
+  <g class="flame-layer flame-2" transform="translate(200,360)">
+    <path d="M0,0 Q-12,-70 0,-110 Q18,-90 22,-130 Q32,-100 35,-140 Q18,-160 0,-180 Q-18,-160 -35,-140 Q-32,-100 -22,-130 Q-18,-90 0,-110 Q12,-70 0,0 Z" 
+          fill="url(#flameGradient)" />
+  </g>
+  
+  <g class="flame-layer flame-3" transform="translate(350,355)">
+    <path d="M0,0 Q-18,-85 0,-125 Q25,-105 30,-145 Q40,-115 45,-155 Q25,-185 0,-205 Q-25,-185 -45,-155 Q-40,-115 -30,-145 Q-25,-105 0,-125 Q18,-85 0,0 Z" 
+          fill="url(#flameGradient)" />
+  </g>
+  
+  <g class="flame-layer flame-4" transform="translate(500,365)">
+    <path d="M0,0 Q-10,-65 0,-105 Q15,-85 18,-125 Q28,-95 32,-135 Q15,-155 0,-175 Q-15,-155 -32,-135 Q-28,-95 -18,-125 Q-15,-85 0,-105 Q10,-65 0,0 Z" 
+          fill="url(#flameGradient)" />
+  </g>
+  
+  <g class="flame-layer flame-5" transform="translate(650,350)">
+    <path d="M0,0 Q-20,-90 0,-130 Q30,-110 35,-150 Q45,-120 50,-160 Q30,-190 0,-210 Q-30,-190 -50,-160 Q-45,-120 -35,-150 Q-30,-110 0,-130 Q20,-90 0,0 Z" 
+          fill="url(#flameGradient)" />
+  </g>
+  
+  <!-- Floating embers -->
+  <circle class="ember" cx="150" cy="300" r="3" style="animation-delay: 0s;" />
+  <circle class="ember" cx="250" cy="320" r="2" style="animation-delay: 0.5s;" />
+  <circle class="ember" cx="400" cy="310" r="4" style="animation-delay: 1s;" />
+  <circle class="ember" cx="520" cy="290" r="2" style="animation-delay: 1.5s;" />
+  <circle class="ember" cx="600" cy="305" r="3" style="animation-delay: 2s;" />
+</svg>
