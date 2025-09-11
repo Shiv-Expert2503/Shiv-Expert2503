@@ -1,20 +1,17 @@
 <div align="center">
 
-<!-- Aizawa Chaos System Animation -->
-<img src="./assets/aizawa-chaos.svg" width="100%" alt="Aizawa Attractor Chaos System" />
+# Shivansh
 
-# 🌊 Shivansh - Chaos Engineer 🌊
+**Scientific Computing & Machine Learning**
 
-*"In chaos, there is beauty. In complexity, there is simplicity."*
+*Exploring the intersection of mathematics, physics, and deep learning.*
 
-### 🔬 Exploring the Mathematics of Chaos
+---
 
-Aizawa System: dx/dt = (z-b)x - dy
-dy/dt = dx + (z-b)y
-dz/dt = c + az - z³/3 - (x²+y²)(1+ez) + fz(x³)
+<a href="https://en.wikipedia.org/wiki/Aizawa_attractor">
+  <img src="./assets/aizawa.svg" width="90%" alt="Aizawa Attractor Animation" />
+</a>
 
-text
-
-**🎯 Building systems that dance on the edge of chaos**
+*Computational visualization of the Aizawa Attractor, a system of deterministic chaos.*
 
 </div>
