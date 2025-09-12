@@ -31,7 +31,8 @@ $$\mathcal{L}(\theta) = \underbrace{\lambda_{data} \mathcal{L}_{data}}_{\text{Da
 * **The Challenge:** How can a network represent continuous, complex signals without losing detail?
 * **The Solution:** By constructing a network where each layer is a sinusoidal function, allowing it to perfectly capture the signal's derivatives and fine details.
 
-    $$\Phi(\mathbf{x}) = (f_L \circ \dots \circ f_1)(\mathbf{x}) \quad \text{where} \quad f_i(\mathbf{x}_i) = \sin(\mathbf{W}_i \mathbf{x}_i + \mathbf{b}_i)$$
+$$\Phi(\mathbf{x}) = (f_L \circ \dots \circ f_1)(\mathbf{x}) \quad \text{where} \quad f_i(\mathbf{x}_i) = \sin(\mathbf{W}_i \mathbf{x}_i + \mathbf{b}_i)$$
+
 ---
 
 ## 🛠️ My Toolkit
