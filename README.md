@@ -1,17 +1,19 @@
 <div align="center">
 
-# Shivansh
+# **Shiv Expert**
 
-**Scientific Computing & Machine Learning**
+### Exploring the Intersection of Mathematics and Machine Learning
 
-*Exploring the intersection of mathematics, physics, and deep learning.*
+*Specializing in Physics-Informed Neural Networks (PINNs) and Scientific Machine Learning (SciML)*
+
+</div>
+
+<img src="./assets/sine_wave.svg" alt="Sine Wave Animation" />
 
 ---
 
-<a href="https://en.wikipedia.org/wiki/Aizawa_attractor">
-  <img src="./assets/aizawa.svg" width="90%" alt="Aizawa Attractor Animation" />
-</a>
+### 🔬 Core Projects & Expertise
 
-*Computational visualization of the Aizawa Attractor, a system of deterministic chaos.*
-
-</div>
+-   **PINNs for PDE Solving:** Implemented Physics-Informed Neural Networks to solve differential equations like the 1D Heat, Wave, and Burgers' equations.
+-   **Sinusoidal Representation Networks (SIRENs):** Built and demonstrated Implicit Neural Representations for high-fidelity signal and image reconstruction.
+-   **Adaptive Sampling:** Currently researching and implementing adaptive sampling techniques to improve PINN efficiency and accuracy on limited compute (Google Colab/Kaggle).
