@@ -8,7 +8,7 @@
 
 </div>
 
-<img src="./assets/sine_wave.svg" alt="Sine Wave Animation" />
+<img src="./assets/temp.gif" alt="Portfolio Animation" />
 
 ---
 
