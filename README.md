@@ -9,7 +9,7 @@
 ---
 
 <a href="https://en.wikipedia.org/wiki/Aizawa_attractor">
-  <img src="./assets/aizawa.svg" width="90%" alt="Aizawa Attractor Animation" />
+  <img src="./assets/aizawa-chaos.svg" width="90%" alt="Aizawa Attractor Animation" />
 </a>
 
 *Computational visualization of the Aizawa Attractor, a system of deterministic chaos.*
