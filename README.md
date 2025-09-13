@@ -1,6 +1,6 @@
 <div align="center">
 
-# **Shiv Expert**
+# **Shivansh**
 
 > Bridging Mathematics and AI to Model the Physical World.
 
